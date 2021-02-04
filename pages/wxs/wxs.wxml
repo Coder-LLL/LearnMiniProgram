@@ -1,0 +1,20 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+
+<!-- 方法1：在内部编写wxs -->
+<!-- <wxs module="info">
+  var message = "lzh"
+  var age = 20
+  // 将想要在外部访问的东西导出，否则无法访问
+  module.exports = {
+    message: message,
+    age: age
+  }
+</wxs> -->
+
+<!-- 方法2：在外部编写然后引入 -->
+<wxs src='../../wxs/info.wxs' module="info"></wxs>
+<wxs src='../../wxs/format.wxs' module="format"></wxs>
+<view> {{info.message}} {{info.age}}</view>
+<view>{{format.priceFormat(price,3)}}</view>
+

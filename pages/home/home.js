@@ -5,62 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    titles: ['衣服','裤子','鞋子'],
+    counter: 0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  viewClick(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  innerviewClick(event){
+    console.log(event)
+    console.log("currentTarget中的id表示的是触发事件的id，而target中的id记录的是产生事件的id")
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleItemClick(event ,index , item){
+    console.log(event)
+    const dataset = event.target.dataset
+    console.log(dataset.index,dataset.item)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  increment(){
+    console.log(22)
+    this.setData({
+      counter: this.data.counter+1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  itemClick(event){
+    console.log(event.detail)
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  inreament(){
+    // 通过selectComponent获取到某个组件，然后调用组件的方法或者数据
+    const my_sel = this.selectComponent('#my_sel')
+    // 一般外界修改组件数据的时候，不是直接修改的，而是通过组件的方法去修改的，所以组件要定义一个修改自己数据的方法，外界调用这个方法而不是直接修改数据
+    my_sel.increamentCounter()
   }
 })

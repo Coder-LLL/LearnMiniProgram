@@ -1,0 +1,43 @@
+<!--pages/wxml/wxml.wxml-->
+<text>pages/wxml/wxml.wxml</text>
+<button size="mini" bindtap="changeActive">点击切换颜色</button>
+<view class="{{isActive ? 'active' : ''}}">哈哈哈</view>
+
+<view>
+  <view wx:if="{{score > 90}}"> 成绩优秀 </view>
+  <view wx:elif="{{score > 80}}">成绩良好</view>
+  <view wx:else>成绩一般</view>
+</view>
+
+<view>--------比较hidden和wx：if的不同-------</view>
+<rich-text>hidden将组件隐藏的时候，组件依然存在，只是将display设置为none
+     --- wx：if设置为false的时候，组件压根不进行渲染，组件不存在
+    如果显示和隐藏切换的频率很高，使用hidden
+</rich-text>
+<view wx:if="{{ false }}"> 我是wx：if </view>
+<view>--------</view>
+<view hidden="{{ true }}"> 我是hidden </view>
+<view>--------</view>
+
+<view>-------template------</view>
+<!-- 使用template创建一个模板,模板要包含一个name,模板中包裹的内容,在没有使用之前是不会进行任何渲染的 -->
+<template name="contentItem1">
+  <view>我是模板中的内容</view>
+</template>
+<!-- 在使用的时候,通过is确定使用的是哪个模板 -->
+<template is="contentItem1"></template>
+<view>-------</view>
+<!-- 如果想在使用时再确定内容，则可以使用 {{}} 语法-->
+<template name="contentItem2">
+  <view>{{content1}}</view>
+  <view>{{content2}}</view>
+</template>
+<!-- 在传递值得时候通过data传递, 格式{{key1:value1,key2:value2}} -->
+<template is="contentItem2" data="{{content1:'我是内容1', content2:'我是内容2'}}"></template>
+<!-- 可以通过import就可以使用外部模板，这样一个模板就可以在多个文件中使用 -->
+<import src="../../template.wxml"></import>
+<template is="contentItem3"></template>
+
+<view>---------------------</view>
+<!-- 当有一些wsml要在多个文件中使用的时候，可以将这些wsml文件单独写在一个文件夹中，然后通过include引入这个文件夹 -->
+<include src="../../header.wxml"></include>

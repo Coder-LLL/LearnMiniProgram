@@ -1,7 +1,22 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
+    "pages/wxs/wxs",
+    "pages/wxml/wxml",
+    "pages/wxss/wxss",
+    "pages/scroll/scroll",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/button/button",
+    "pages/text/text",
+    "pages/about/about",
+    "components/my_cpn/my_cpn",
+    "components/my_prop/my_prop",
+    "components/my_event/my_event"
   ],
-  "sitemapLocation": "sitemap36.json"
+  "usingComponents": {
+    "my_cpn": "./components/my_cpn/my_cpn"
+  },
+  "sitemapLocation": "sitemap73.json"
 }

@@ -1,0 +1,1 @@
+<view>当前counter的值： {{counter}}</view>

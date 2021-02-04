@@ -1,0 +1,10 @@
+<!--pages/text/text.wxml-->
+<!-- text是行内元素，不会单独占用一整行 -->
+<text>哈哈哈</text>
+<text>呵呵呵</text>
+<text>\n</text>
+
+
+<!-- 如果想换行，则在text元素的结果处加一个\n -->
+<text user-select="true">哈哈哈\n</text>
+<text>呵呵呵</text>

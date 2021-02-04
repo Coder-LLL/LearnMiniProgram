@@ -1,0 +1,4 @@
+/* 如果样式很多，我们可以将同类样式单独写在一个wxss文件中,然后通过@import导入 */
+@import './style/box.wxss';
+
+@import './style/text.wxss';

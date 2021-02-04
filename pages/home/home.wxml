@@ -1,2 +1,36 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<!-- <view>1</view>
+<view  bindtap="viewClick" id="box">
+  <view bindtap="innerviewClick" id="innerbox"></view>
+</view>
+<view>-----------</view> -->
+
+
+<!-- 事件参数的传递，通过 data- 来传递 然后在这些参数放在event事件的taget中的dataset-->
+<!-- <view>
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view bindtap="handleItemClick"
+          data-index="{{index}}"
+          data-item="{{item}}">
+      {{item}}
+    </view>
+  </block>
+</view> -->
+
+<!-- <view>----使用自定义组件----</view> -->
+<!-- <my_cpn></my_cpn> -->
+<!-- 向组件传递值可以通过properties属性
+<my_prop title="我是标题1" message="我是内容1"></my_prop>
+<my_prop title="我是标题2"></my_prop>
+<!-- 组件通过自定义事件向当前wxml文件传递信息 -->
+<!-- <view>当前数量：{{counter}}</view>
+<my_event bind:increment="increment"></my_event> --> 
+
+
+<w-tab-control bind:itemClick="itemClick" titles="{{['衣服','裤子','鞋子']}}"></w-tab-control>
+
+<my_sel id="my_sel"></my_sel>
+<button bindtap="inreament">点击增加</button>
+<view>----------------------</view>
+<my_slot>
+  <View>我是插条内容</View>
+</my_slot>

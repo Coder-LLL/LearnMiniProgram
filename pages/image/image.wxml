@@ -1,0 +1,4 @@
+<image src="../../assets/img/profile/cart.svg"></image>
+<text>aaa</text>
+<button bindtap="handleChoose">选中图片</button>
+<image src="{{imagePath}}"></image>

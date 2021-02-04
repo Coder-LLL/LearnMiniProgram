@@ -1,0 +1,4 @@
+<!--pages/input/input.wxml-->
+<text>pages/input/input.wxml</text>
+<!-- 注意，input的默认样式是白色，看不见 -->
+<input placeholder="请输入：" bindinput="getInput" type="text" />

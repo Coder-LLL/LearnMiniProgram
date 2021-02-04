@@ -1,0 +1,3 @@
+<!--pages/button/button.wxml-->
+
+<button hover-class="pressed">按钮</button>

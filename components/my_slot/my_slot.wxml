@@ -1,0 +1,8 @@
+
+<view>
+  我是组件的头部
+</view>
+<slot></slot>
+<view>
+  我是尾部
+</view>

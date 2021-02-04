@@ -1,0 +1,3 @@
+<template name="contentItem3">
+  <view>我是外部模板中的内容</view>
+</template>

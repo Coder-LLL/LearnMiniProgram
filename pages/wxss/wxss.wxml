@@ -1,0 +1,10 @@
+
+<view class="box1">
+  <text class="text1">哈哈哈</text>
+  <text  class="text1">呵呵呵</text>
+</view>
+
+<view class="box2">
+  <text  class="text2">哈哈哈</text>
+  <text  class="text2">呵呵呵</text>
+</view>

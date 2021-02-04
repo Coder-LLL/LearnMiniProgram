@@ -1,0 +1,6 @@
+.box1{
+  background-color: violet;
+}
+.box2{
+  background-color: tomato;
+}

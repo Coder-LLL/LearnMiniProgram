@@ -1,0 +1,13 @@
+<!--pages/scroll/scroll.wxml-->
+<!-- 水平滚动 -->
+<scroll-view class="container1" scroll-x="true">
+  <view class="item1" wx:for="{{10}}"> {{item}} </view>
+</scroll-view>
+
+
+<view>---------------------</view>
+<!-- 垂直滚动 -->
+<!-- 对于垂直方向，如果想实现局部滚动，就要对外面的容器container2设置高度 -->
+<scroll-view class="container2" scroll-y="true">
+  <view class="item2" wx:for="{{10}}"> {{item}} </view>
+</scroll-view>

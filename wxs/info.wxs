@@ -1,0 +1,9 @@
+// 注意在wxs中必须设置module属性，之后要通过该名字来获取内部定义的东西。
+
+var message = "lzh"
+var age = 20
+// 将想要在外部访问的东西导出，否则无法访问
+module.exports = {
+  message: message,
+  age: age
+}
