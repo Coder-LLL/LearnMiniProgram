@@ -1,2 +1,1 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<button bindtap="handleShowToast">展示toast</button>
